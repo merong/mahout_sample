@@ -17,7 +17,6 @@ public class RecommenderIntro {
     public static void main(String[] args) throws Exception {
         DataModel model = new FileDataModel(new File("intro.csv"));
 
-
         UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
         UserNeighborhood neighborhood  = new NearestNUserNeighborhood(2, similarity, model);
 
